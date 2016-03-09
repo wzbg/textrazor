@@ -1,6 +1,6 @@
 {
   "name": "textrazor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TextRazor SDK for node.js",
   "main": "index.js",
   "scripts": {
