@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:39:14
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-09 09:40:16
+* @Last Modified time: 2016-03-10 18:26:19
 */
 'use strict'
 
@@ -50,5 +50,5 @@ Apple's Tim Cook said on Wednesday the FBI's demands set "a dangerous precedent"
 "The FBI wants us to make a new version of the iPhone operating system, circumventing several important security features, and install it on an iPhone recovered during the investigation."`
 
 textRazor.exec(content)
-  .then(res => console.log(res.response.entities))
+  .then(res => console.log(JSON.stringify(res)))
   .catch(err => console.error(err))
