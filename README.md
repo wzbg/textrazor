@@ -12,7 +12,7 @@ Install using npm:
 ## Usage
 
 ```javascript
-const TextRazor = require('./index')
+const TextRazor = require('textrazor')
 const textRazor = new TextRazor('<YOUR API KEY>')
 const content = 'The Federal Reserve is the enemy of Ron Paul.'
 textRazor.exec(content)
