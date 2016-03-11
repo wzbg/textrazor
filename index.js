@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:06:33
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-08 14:41:22
+* @Last Modified time: 2016-03-11 17:52:35
 */
 'use strict'
 
@@ -21,11 +21,15 @@ module.exports = class {
     return new Promise((resolve, reject) => {
       request.post(url, { headers: this.headers, form: { extractors, text } }, (err, resp, body) => {
         if (err) return reject(err)
-        const json = JSON.parse(body)
-        if (resp.statusCode === 200) {
-          resolve(json)
-        } else {
-          reject(json)
+        try {
+          const json = JSON.parse(body)
+          if (resp.statusCode === 200) {
+            resolve(json)
+          } else {
+            reject(json)
+          }
+        } catch (err) {
+          reject(err)
         }
       })
     })
