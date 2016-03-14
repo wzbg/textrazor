@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:06:33
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-14 16:17:59
+* @Last Modified time: 2016-03-14 16:25:29
 */
 'use strict'
 
@@ -28,6 +28,7 @@ module.exports = class {
             resolve(json)
           } else {
             json.code = resp.statusCode
+            json.key = this.apiKey
             reject(json)
           }
         } catch (err) {
