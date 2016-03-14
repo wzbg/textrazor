@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:39:14
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-14 16:18:37
+* @Last Modified time: 2016-03-14 18:02:31
 */
 'use strict'
 
@@ -49,7 +49,7 @@ However, he says the short term benefits of doing this need to be weighed up aga
 Apple's Tim Cook said on Wednesday the FBI's demands set "a dangerous precedent".
 "The FBI wants us to make a new version of the iPhone operating system, circumventing several important security features, and install it on an iPhone recovered during the investigation."`
 
-textRazor.exec(content)
+textRazor.exec(content, { languageOverride: 'eng' })
   .then(res => console.log(JSON.stringify(res)))
   .catch(err => console.error(err))
 
