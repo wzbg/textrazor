@@ -2,14 +2,13 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:39:14
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-14 19:42:54
+* @Last Modified time: 2016-03-14 19:44:58
 */
 'use strict'
 
 const TextRazor = require('./index')
 
-// const textRazor = new TextRazor('<YOUR API KEY>')
-const textRazor = new TextRazor('7127219862a859f12424247eadaccac5375d6bbacbb7ccb1d76df530')
+const textRazor = new TextRazor('<YOUR API KEY>')
 
 // const content = 'The Federal Reserve is the enemy of Ron Paul.'
 // const content = `Apple order: White House says San Bernardino request is limited
