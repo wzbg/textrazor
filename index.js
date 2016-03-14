@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:06:33
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-14 13:58:55
+* @Last Modified time: 2016-03-14 16:17:59
 */
 'use strict'
 
@@ -11,10 +11,11 @@ const request = require('request')
 const url = 'http://api.textrazor.com'
 
 module.exports = class {
-  constructor(token, headers) {
+  constructor(apiKey, headers) {
     this.headers = headers = headers || {}
-    if (!headers['x-textrazor-key']) headers['x-textrazor-key'] = token
+    if (!headers['x-textrazor-key']) headers['x-textrazor-key'] = apiKey
     if (!headers['Content-Type']) headers['Content-Type'] = 'text/html'
+    this.apiKey = headers['x-textrazor-key']
   }
   exec(text, extractors) {
     extractors = extractors || 'entities'

@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:39:14
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-10 18:26:19
+* @Last Modified time: 2016-03-14 16:18:37
 */
 'use strict'
 
@@ -52,3 +52,5 @@ Apple's Tim Cook said on Wednesday the FBI's demands set "a dangerous precedent"
 textRazor.exec(content)
   .then(res => console.log(JSON.stringify(res)))
   .catch(err => console.error(err))
+
+console.log(textRazor.apiKey)
