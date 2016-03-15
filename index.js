@@ -2,7 +2,7 @@
 * @Author: zyc
 * @Date:   2016-02-18 14:06:33
 * @Last Modified by:   zyc
-* @Last Modified time: 2016-03-14 19:36:29
+* @Last Modified time: 2016-03-15 10:54:42
 */
 'use strict'
 
@@ -25,16 +25,20 @@ module.exports = class {
     options.extractors = options.extractors || 'entities'
     if (options.text) text = options.text
     const maxLength = options.maxLength || 100000
-    let tmpText = ''
     const texts = []
-    for (let content of text.split(' ')) {
-      tmpText += content + ' '
-      if (tmpText.length > maxLength) {
-        texts.push(tmpText)
-        tmpText = ''
+    if (text.length < maxLength) {
+      texts.push(text)
+    } else {
+      let tmpText = ''
+      for (let content of text.split(' ')) {
+        tmpText += content + ' '
+        if (tmpText.length > maxLength) {
+          texts.push(tmpText)
+          tmpText = ''
+        }
       }
+      if (tmpText) texts.push(tmpText)
     }
-    if (tmpText) texts.push(tmpText)
     return new Promise((resolve, reject) => {
       Promise.all(texts.map(text => {
         options.text = text
