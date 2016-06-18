@@ -1,12 +1,11 @@
 # textrazor
+> TextRazor SDK for node.js
 
-TextRazor SDK for node.js
-
-## Install
+## Installation
 
 Install using npm:
 ```sh
-    $ npm install textrazor
+$ npm install textrazor --save
 ```
 
 ## Usage
@@ -15,7 +14,8 @@ Install using npm:
 const TextRazor = require('textrazor')
 const textRazor = new TextRazor('<YOUR API KEY>')
 const content = 'The Federal Reserve is the enemy of Ron Paul.'
-textRazor.exec(content)
+const options = { extractors: 'entities,topics' }
+textRazor.exec(content, options)
   .then(res => console.log(JSON.stringify(res)))
   .catch(err => console.error(err))
 ```
@@ -24,10 +24,10 @@ textRazor.exec(content)
 
 Run tests:
 ```sh
-    $ npm test
+$ npm test
 ```
 
-Tested with node.js v4.0+
+Runs in Node.js v4.0+
 
 ## License
 The MIT License (MIT)
