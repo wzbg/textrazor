@@ -4,7 +4,7 @@
   "description": "TextRazor SDK for node.js",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "mocha ./test/."
   },
   "author": {
     "name": "wzbg",
@@ -20,5 +20,9 @@
   ],
   "dependencies": {
     "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "nock": "^8.0.0"
   }
 }

@@ -1,0 +1,65 @@
+{
+  "response": {
+    "language": "eng",
+    "languageIsReliable": true,
+    "entities": [
+      {
+        "id": 0,
+        "type": [
+          "Work",
+          "WrittenWork",
+          "Book"
+        ],
+        "matchingTokens": [
+          0,
+          1,
+          2
+        ],
+        "entityId": "The Great Gatsby",
+        "freebaseTypes": [
+          "/fictional_universe/work_of_fiction",
+          "/book/written_work",
+          "/book/book",
+          "/book/translated_work",
+          "/media_common/dedicated_work",
+          "/book/book_subject",
+          "/media_common/adapted_work",
+          "/award/ranked_item",
+          "/media_common/quotation_source"
+        ],
+        "confidenceScore": 3.1684,
+        "wikiLink": "http://en.wikipedia.org/wiki/The_Great_Gatsby",
+        "matchedText": "The Great Gatsby",
+        "freebaseId": "/m/0k2y7",
+        "relevanceScore": 0,
+        "entityEnglishId": "The Great Gatsby",
+        "startingPos": 0,
+        "endingPos": 16,
+        "wikidataId": "Q214371"
+      },
+      {
+        "id": 1,
+        "type": [
+          "Place"
+        ],
+        "matchingTokens": [
+          1,
+          2
+        ],
+        "entityId": "Great Gatsby",
+        "freebaseTypes": [
+          "/location/location"
+        ],
+        "confidenceScore": 0.5,
+        "wikiLink": "",
+        "matchedText": "Great Gatsby",
+        "relevanceScore": 0,
+        "entityEnglishId": "",
+        "startingPos": 4,
+        "endingPos": 16
+      }
+    ]
+  },
+  "time": 0.00858018,
+  "ok": true
+}
