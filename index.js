@@ -8,7 +8,7 @@
 
 const request = require('request')
 
-const url = 'http://api.textrazor.com'
+const url = 'https://api.textrazor.com'
 
 module.exports = class {
   constructor(apiKey, headers) {

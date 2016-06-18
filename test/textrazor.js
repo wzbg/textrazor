@@ -6,7 +6,7 @@ const nock = require('nock')
 const fs = require('fs');
 
 const textRazor = new TextRazor('DUMMY_API_KEY')
-const textRazorScope = nock('http://api.textrazor.com', {
+const textRazorScope = nock('https://api.textrazor.com', {
 	reqheaders: {
 		'x-textrazor-key': /^DUMMY_API_KEY$/
 	}
