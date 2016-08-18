@@ -1,6 +1,6 @@
 {
   "name": "textrazor",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "TextRazor SDK for node.js",
   "main": "index.js",
   "scripts": {
@@ -19,10 +19,10 @@
     "textrazor"
   ],
   "dependencies": {
-    "request": "^2.69.0"
+    "request": "^2.74.0"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
+    "mocha": "^3.0.2",
     "nock": "^8.0.0"
   }
 }
