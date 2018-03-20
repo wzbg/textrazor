@@ -6,7 +6,7 @@
 */
 'use strict'
 
-const request = require('request')
+var request = require('request')
 
 const url = 'https://api.textrazor.com'
 
@@ -24,6 +24,9 @@ module.exports = class {
     options = options || {}
     options.extractors = options.extractors || 'entities'
     if (options.text) text = options.text
+    if (options.maxConcurrentRequest){ //TextRazor API limit concurrent requests
+      request = request.defaults({pool: { maxSockets: options.maxConcurrentRequest}})
+    }
     const maxLength = options.maxLength || 100000
     const texts = []
     if (text.length < maxLength) {
@@ -47,14 +50,22 @@ module.exports = class {
         let json
         for (let data of results) {
           if (json) {
-            for (let entity of data.response.entities) {
-              json.response.entities.push(entity)
-            }
+              for(var k in data.response){
+                if (data.response[k] instanceof Array) {
+                  if (json.response[k] === undefined) {
+			          json.response[k] = [];
+                  }
+
+                  for (let d of data.response[k]) {
+                    json.response[k].push(d)
+                  }
+                }
+              }
           } else {
             json = data
           }
         }
-        resolve(json)
+        resolve(json);
       }).catch(err => reject(err))
     })
   }
